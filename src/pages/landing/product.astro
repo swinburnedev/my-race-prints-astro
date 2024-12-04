@@ -1,17 +1,15 @@
 ---
+import "mapbox-gl/dist/mapbox-gl.css"
+
 import Layout from '~/layouts/LandingLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-
 const metadata = {
   title: 'Product Details Landing Page Demo',
 };
 ---
-
 <Layout metadata={metadata}>
-  <!-- Hero2 Widget ******************* -->
-
   <Hero
     tagline="Product Details Demo"
     title="Product Landing Page: Showcase with Precision and Passion!"
@@ -25,7 +23,7 @@ const metadata = {
       alt: 'A spotlight on a product. Product Details Landing Page Demo',
     }}
   />
-
+  <div id="map" style="height: 400px;"></div>
   <CallToAction
     title="Coming soon"
     subtitle="We are working on the content of these demo pages. You will see them very soon. Stay tuned Stay tuned!"
@@ -39,3 +37,7 @@ const metadata = {
     ]}
   />
 </Layout>
+<script>
+  import {MapBoxService} from '~/services/mapbox'
+  MapBoxService.initMap("map")
+</script>
