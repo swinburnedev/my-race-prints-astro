@@ -3,35 +3,19 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
     links: [
         {
-            text: "Pages",
+            text: "Marathons",
             links: [
                 {
-                    text: "Features (Anchor Link)",
-                    href: getPermalink("/#features"),
+                    text: "Boston",
+                    href: getPermalink("/marathon/boston"),
                 },
                 {
-                    text: "Services",
-                    href: getPermalink("/services"),
+                    text: "London",
+                    href: getPermalink("/marathon/london"),
                 },
                 {
-                    text: "Pricing",
-                    href: getPermalink("/pricing"),
-                },
-                {
-                    text: "About us",
-                    href: getPermalink("/about"),
-                },
-                {
-                    text: "Contact",
-                    href: getPermalink("/contact"),
-                },
-                {
-                    text: "Terms",
-                    href: getPermalink("/terms"),
-                },
-                {
-                    text: "Privacy policy",
-                    href: getPermalink("/privacy"),
+                    text: "Tokyo",
+                    href: getPermalink("/marathon/tokyo"),
                 },
             ],
         },
@@ -90,8 +74,8 @@ export const headerData = {
             ],
         },
         {
-            text: "Widgets",
-            href: "#",
+            text: "Custom",
+            href: getPermalink("tutorials", "category"),
         },
     ],
     actions: [{text: "Login", href: "/login"}],
